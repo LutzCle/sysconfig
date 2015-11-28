@@ -1,0 +1,17 @@
+[Unit]
+Wants=avahi-daemon.service
+Description=PulseAudio Daemon
+ 
+[Install]
+WantedBy=multi-user.target
+ 
+[Service]
+Type=forking
+PIDFile=/var/run/pulse/pid
+BusName=org.pulseaudio.Server
+BusName=org.PulseAudio1
+ExecStartPre=/bin/mkdir -p /var/run/pulse/.config/pulse/
+ExecStartPre=/bin/chown -R pulse:pulse /var/run/pulse
+ExecStartPre=/bin/cp -p /etc/pulse/cookie /var/run/pulse/.config/pulse/
+ExecStart=/usr/bin/pulseaudio -vvv -D --system
+#ExecReload=/bin/kill -HUP $MAINPID
