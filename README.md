@@ -4,10 +4,10 @@ System configuration files
 # Pulseaudio
 Setup for local network access to pulseaudio server.
 
-Packages need on server:
+Packages needed on server:
 - Debian: `apt-get install pulseaudio pulseaudio-module-zeroconf alsa-utils avahi-daemon dbus-x11`
 
-Packages need on client:
+Packages needed on client:
 - Arch Linux: `pacman -S pulseaudio pulseaudio-alsa pulseaudio-zeroconf pavucontrol paprefs`
 
 1. Copy files in etc/pulse/ to /etc/pulse/
