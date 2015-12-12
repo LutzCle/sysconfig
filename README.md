@@ -15,4 +15,5 @@ Packages needed on client:
 3. Enable pulseaudio service with `systemctl enable pulseaudio.service`
 4. Start pulseaudio service with `systemctl start pulseaudio.service`
 5. Open `paprefs` and check `Network Access -> Make discoverable PulseAudio network sound devices available locally`
-6. Open `pavucontrol`. You should see remote audio sinks in `Output Devices` tab
+6. For RTP streaming, check `Multicast/RTP -> Enable Multicast RTP sender -> Create separate audio device for Multicast/RTP`
+7. Open `pavucontrol`. You should see remote audio sinks in `Output Devices` tab
